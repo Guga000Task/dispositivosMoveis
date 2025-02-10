@@ -1,3 +1,5 @@
+import java.net.URI
+
 pluginManagement {
     repositories {
         google {
@@ -18,7 +20,25 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = URI("https://jitpack.io")
+        }
+    }
+}
 
 rootProject.name = "paint"
 include(":app")
+include(":app")
+include(":paint")
+include(":listagemdados")
+include(":listagem-nomes")
+include(":launcher")
+include(":sqliteex")
+include(":sensores")
+include(":tabelanutricional")
  
